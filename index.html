@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Roastery | Coffee House</title>
+    <link rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%233b2416'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-size='44' font-family='Georgia,serif' fill='%23fff8ed'%3Eℛ%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-icon">ℛ</span>
+            <span class="logo-name">The Roastery</span>
+        </div>
+
+    </header>
+    <main class="dashboard">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <p class="eyebrow">
+            A LITTLE BREAK, PERHAPS?
+        </p>
+
+        <h1>
+            Can we have<br>
+            a coffee?
+        </h1>
+
+        <p class="hero-description">
+            Life can wait. Coffee can't.<br>
+            Come, let's make today a little better.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button id="yesBtn" class="yes-btn">
+                Why not! ☕ →
+            </button>
+
+            <button id="noBtn" class="no-btn">
+                Not in the mood
+            </button>
+
+        </div>
+
+    </section>
+    <!-- TODAY'S MENU -->
+
+<section class="menu-card">
+
+    <div class="menu-heading">
+        <p class="card-label">TODAY'S MENU</p>
+        <h2>Five little favourites.</h2>
+    </div>
+
+    <div class="menu-items">
+
+        <div class="menu-item">
+            <span class="coffee-icon">☕</span>
+
+            <div class="coffee-details">
+                <h3>Espresso</h3>
+                <p>Bold & aromatic shot.</p>
+            </div>
+
+            <span class="price">₹120</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="coffee-icon">☕</span>
+
+            <div class="coffee-details">
+                <h3>Cappuccino</h3>
+                <p>Espresso, steamed milk.</p>
+            </div>
+
+            <span class="price">₹160</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="coffee-icon">☕</span>
+
+            <div class="coffee-details">
+                <h3>Caramel Latte</h3>
+                <p>Smooth, caramel bliss.</p>
+            </div>
+
+            <span class="price">₹180</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="coffee-icon">☕</span>
+
+            <div class="coffee-details">
+                <h3>Cold Brew</h3>
+                <p>Chilled perfection.</p>
+            </div>
+
+            <span class="price">₹150</span>
+        </div>
+
+        <div class="menu-item">
+            <span class="coffee-icon">☕</span>
+
+            <div class="coffee-details">
+                <h3>Mocha</h3>
+                <p>Chocolate & coffee.</p>
+            </div>
+
+            <span class="price">₹190</span>
+        </div>
+
+    </div>
+
+    <div class="menu-footer">
+        <a href="#full-menu">View full menu →</a>
+    </div>
+
+</section>
+<!-- DISCOVERY: ROASTED MAGIC -->
+
+<section class="discovery-card">
+
+    <p class="card-label">
+        DISCOVERY · ROASTED MAGIC
+    </p>
+
+    <h2>
+        Didn't know<br>
+        what to drink?
+    </h2>
+
+    <p class="discovery-description">
+        Let us find your<br>
+        roasted magic of the day.
+    </p>
+
+    <button id="discoverBtn">
+        Reveal my coffee ↗
+    </button>
+
+</section>
+
+<section class="notes-card">
+  <p class="card-label">THE COFFEE CORNER</p>
+  <h2>Leave a little note.</h2>
+  <p class="notes-description">
+    Thoughts, stories, or just a hello.
+  </p>
+
+  <textarea
+    id="noteInput"
+    placeholder="Write something lovely..."
+    maxlength="180"
+  ></textarea>
+
+  <button id="addNoteBtn">Pin your note ↗</button>
+
+  <div class="notes-divider"></div>
+
+  <h3>Little notes from visitors</h3>
+  <div id="notesList" class="notes-list"></div>
+</section>
+
+<section class="calendar-card">
+  <p class="card-label">A DATE WITH COFFEE</p>
+
+  <div class="calendar-heading">
+    <button id="prevMonth" aria-label="Previous month">‹</button>
+    <h2 id="monthYear"></h2>
+    <button id="nextMonth" aria-label="Next month">›</button>
+  </div>
+
+  <div class="calendar-grid" id="calendarGrid">
+    <!-- Calendar dates will be generated using JavaScript -->
+  </div>
+
+  <p class="calendar-footer">Make today a little special. ☕</p>
+</section>
+
+<section class="music-card">
+  <p class="card-label">SOUNDS OF THE ROASTERY</p>
+
+  <h2>A little music<br>with your coffee.</h2>
+
+  <p class="music-description">
+    Press play. Take a breath. Enjoy the moment.
+  </p>
+
+  <div class="spotify-player">
+    <iframe
+      src="https://open.spotify.com/embed/playlist/PLAYLIST_ID?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <p class="music-footer">Curated for your coffee moments ☕</p>
+</section>
+
+
+
+</main>
+    <!-- COFFEE DISCOVERY MODAL -->
+
+<div class="modal-overlay" id="coffeeModal">
+
+    <div class="coffee-modal">
+
+        <button class="close-modal" id="closeModal">×</button>
+
+        <p class="modal-label">✦ THE ROASTERY PRESENTS ✦</p>
+
+        <div class="modal-icon">☕</div>
+
+        <h2 id="coffeeName">Your Coffee</h2>
+
+        <p class="modal-tagline">
+            A little magic in every sip.
+        </p>
+
+        <div class="coffee-info">
+
+            <p><strong>Origin</strong>
+                <span id="coffeeOrigin"></span>
+            </p>
+
+            <p><strong>Brewing</strong>
+                <span id="coffeeMethod"></span>
+            </p>
+
+            <p><strong>Flavour</strong>
+                <span id="coffeeFlavour"></span>
+            </p>
+
+        </div>
+
+        <div class="coffee-quote">
+            <p id="coffeeQuote"></p>
+        </div>
+
+        <button class="discover-again" id="discoverAgain">
+            Discover another coffee ↗
+        </button>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+<footer>
+    <section class="visit-card">
+  <p class="card-label">COME FIND US</p>
+
+  <h2>Your coffee<br>corner awaits.</h2>
+
+  <div class="visit-divider"></div>
+
+  <p class="visit-label">OUR ADDRESS</p>
+  <p class="visit-address">
+    Sri Krishna College of Engineering and Technology, Coimbatore, Tamil Nadu, India
+    
+  </p>
+
+  <a
+    class="map-link"
+    href="https://www.google.com/maps/dir/10.9379584,76.9589248/Sri+Krishna+Arts+and+Science+College,+Sri+krishna+arts+and+science+college,+BK+Pudur,+Sugunapuram+East,+Coimbatore,+Kuniyamuthur,+Tamil+Nadu+641008/@10.938006,76.956437,17z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x3ba85bb248b739a9:0xc8c6366878f5122d!2m2!1d76.9592033!2d10.9379272!3e0?entry=ttu&g_ep=EgoyMDI2MTExNi4wIKXMDSoASAFQAw%3D%3D"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Find us on the map ↗
+  </a>
+
+  <p class="visit-footer">Good coffee needs good company. Always.</p>
+</section>
+</footer>
+</html>
